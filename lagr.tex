@@ -1,0 +1,214 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx,epsfig}
+\usepackage[english]{babel}
+\usepackage{latexsym}
+
+\newcommand{\slashed}[1]{\hbox{{$#1$}\llap{$/$}}}
+
+\begin{document}
+
+\section{LV operator}
+     The operator 
+\[
+  \frac{n^\mu} {4 M} 
+    \bigl . \overline{\sigma}_\mu^{\dot{\alpha}\alpha}
+   \int d^4 \theta \bar{S} e^V 
+                  \bar{D}_{\dot{\alpha}} e^{-V} 
+		  D_\alpha e^V S ~  
+\]
+    when expressed in components, looks as
+\begin{eqnarray*}
+% the 1st line
+{\mathcal L} & =  \frac{n^\mu}{M} \Bigl [&
+  i \bar{F} \mathcal{D}_\mu F +
+  \frac{1}{2} i \bar{z} D \mathcal{D}_\mu z - 
+  \frac{1}{2} i \mathcal{D}_\mu(\bar{z}) D z + 
+  i \frac{\sqrt{2}}{4} \left[
+             \overline{\psi\sigma^\mu}\lambda F -
+             \overline{F\lambda\sigma^\mu} \psi
+                       \right] + 
+  \frac{1}{4}\overline{\psi\sigma^\mu}D\psi + \\
+% the 2nd line
+&&  + \frac{1}{4} \bar{z} \left\{ 
+               \lambda\sigma^\mu\bar{\lambda} -
+               \overline{\lambda\sigma^\mu}\lambda 
+                       \right\} z - \\
+% the 3rd line
+&& - \frac{\sqrt{2}}{4} \left\{ 
+                      \overline{\psi\sigma^\nu}\sigma^\mu 
+                     \bar{\lambda}\mathcal{D}_\nu z +
+                     \mathcal{D}_\nu(\bar{z})\lambda\sigma^\mu
+                     \bar{\sigma}^\nu \psi
+                     \right \}
+ - \frac{\sqrt{2}}{2} \left\{ 
+                     \mathcal{D}_\mu(\overline{\psi)\lambda} z + 
+                     \bar{z} \lambda \mathcal{D}_\mu \psi 
+                     \right\} + \\
+% the 4rd line
+&& + \frac{1}{2}\bar{\psi}\mathcal{D}_{(\mu}\mathcal{D}_{\nu)}
+               \bar{\sigma}^\nu \psi -
+  \frac{1}{8} \bar{\psi}\epsilon^{\mu\nu\rho\sigma}
+              F_{\rho\sigma} \bar{\sigma}_\nu \psi +
+  i \bar{z} \mathcal{D}^\nu \mathcal{D}_\mu \mathcal{D}_\nu z +
+  \frac{1}{4} i \mathcal{D}_\nu (\bar{z}) \epsilon^{\mu\nu\rho\sigma}
+              F_{\rho\sigma} z~~~
+                               \Bigr ] 
+\end{eqnarray*}
+
+%%%
+%%% Introduction of the operator P
+%%%
+\section{Operator $ \mathcal{P}_{\alpha\dot{\alpha}} $}
+  We introduce the following differential operator 
+$ \mathcal{P}_{\alpha\dot{\alpha}} $: 
+\begin{eqnarray*}
+%% first line
+   \mathcal{P}_{\alpha\dot{\alpha}} & = & \left\{ \bar{D}_{\dot{\alpha}} 
+D_\alpha \right \} + 
+   \left\{ \bar{D}_{\dot{\alpha}} ( D_\alpha V ) \right \} + 
+   \frac{1}{2} \left\{ \bar{D}_{\dot{\alpha}}  
+             [ (D_\alpha V), V ] \right\} = \\
+%% second line
+ &  = & - 2 i \slashed{\mathcal{D}}_{\alpha\dot{\alpha}} 
+            - 2 i \theta_\alpha \bar{\lambda}_{\dot{\alpha}} 
+            - 2 i \bar{\theta}_{\dot{\alpha}} \lambda_\alpha - \\
+%% third line
+ &&       - 2 \theta_\alpha \bar{\theta}_{\dot{\alpha}} D 
+      + i ( \slashed{\partial} (\bar{\slashed{v}}) \theta )_\alpha \bar{\theta}_{\dot{\alpha}}  
+      + i \theta^\beta \bar{\theta}^{\dot{\beta}} 
+            \slashed{\partial}_{\beta\dot{\alpha}} 
+	     ( \slashed{v}_{\alpha\dot{\beta}} ) 
+      + \frac{1}{2} \bar{\theta}_{\dot{\alpha}} 
+          ( \sigma^\mu \bar{\sigma}^\nu \theta )_\alpha 
+	  [ v_\mu v_\nu ] + \\
+%% fourth line
+  &&  + \theta^2 \slashed{\partial}_{\alpha\dot{\alpha}} ( \overline{\theta\lambda} )  
+  + \theta^2 \bar{\theta}_{\dot{\alpha}} \slashed{\partial}_{\alpha\dot{\beta}} 
+                 ( \bar{\lambda}^{\dot{\beta}} )
+  + i \bar{\theta}_{\dot{\alpha}} \theta^2 
+                 [ \slashed{v}_{\alpha\dot{\beta}} \bar{\lambda}^{\dot{\beta}} ]
+  - \bar{\theta}^2 \theta^\beta \slashed{\partial}_{\beta\dot{\alpha}} ( \lambda_\alpha ) - \\
+%% fifth line
+  && - \frac{1}{2} i \theta^2 \bar{\theta}^2 \partial_{\alpha\dot{\alpha}} ( D ) 
+     - \frac{1}{4} \theta^2 \bar{\theta}^2 ( \slashed{\partial} \bar{\slashed{v}}
+                          \overleftarrow{\slashed{\partial}} )_{\alpha\dot{\alpha}} 
+     - \frac{1}{8} i \theta^2 \bar{\theta}^2 
+                  ( \sigma^\mu \bar{\sigma}^\nu \slashed{\partial} )_{\alpha\dot{\alpha}}
+		      ( [v_\mu v_\nu] ) 
+\end{eqnarray*}
+  where we have the covariant derivative:
+\[
+   \slashed{\mathcal{D}}_{\alpha\dot{\alpha}} \equiv 
+      \sigma^\mu_{\alpha\dot{\alpha}} 
+      \left [  \partial_\mu + \frac{i}{2} v_\mu \right ]
+\]
+
+\section{Basic $|$-properties}
+   Components of 
+$ L $
+   and
+$ \bar{L} $:
+\begin{eqnarray*}
+    & L | = z                &  \bar{L} | = \bar{z} \\
+    & D_\alpha L | = \sqrt{2} \psi_\alpha &
+        D_{\dot{\alpha}} \bar{L} | = \sqrt{2} \bar{\psi}_{\dot{\alpha}} \\
+    & D^2 L | = - 4 F        &  \overline{D^2 L} | = - 4 \bar{F} \\        
+\end{eqnarray*}
+
+%%%                                     V
+%%% Now we introduce the components of e
+%%%
+   Components of 
+   $ e^V $:
+%\[
+% e^V = 1 - \theta\sigma^\mu \bar{\theta} v_\mu 
+%          + i \theta^2 \overline{\theta\lambda} 
+%          - i \bar{\theta}^2 \theta\lambda 
+%          + \frac{1}{2} \theta^2 \bar{\theta}^2 
+%            ( D - \frac{1}{2} v_\mu v^\mu ) 
+%\]
+\begin{eqnarray*}
+ &&  ~~~~e^V | = 1~~~~ D_\alpha e^V | = \bar{D}_{\dot{\alpha}} e^V | = 0  \\
+ &&  D^2 e^V | = \bar{D}^2 e^V | = 0 ~~~~  
+ D_\alpha \bar{D}_{\dot{\alpha}} | = - \slashed{v}_{\alpha\dot{\alpha}} \\
+ &&  D^2 \bar{D}^{\dot{\alpha}} e^V | = - 4 i \bar{\lambda}^{\dot{\alpha}}~~~~~
+     D^\alpha \bar{D}^2 e^V | = 4 i \lambda^\alpha \\
+ && D^2 \bar{D}^2 e^V | = 8 \left( D - \frac{1}{2} v_\mu v^\mu \right) - 8 i \partial_\mu (v^\mu) 
+\end{eqnarray*} 
+
+%%% 
+%%% Now go the components of P
+%%%
+  Components of   
+$ \mathcal{P}_{\alpha\dot{\alpha}} $:
+\begin{eqnarray*}
+%% first line
+  \mathcal{P}_{\alpha\dot{\alpha}} | = - 2 i \slashed{\mathcal{D}}_{\alpha\dot{\alpha}} &
+  D_\beta \mathcal{P}_{\alpha\dot{\alpha}} | =
+            2 i \epsilon_{\beta\alpha}\bar{\lambda}_{\dot{\alpha}} &
+  \bar{D}^{\dot{\beta}} \mathcal{P}_{\alpha\dot{\alpha}} | =
+       - 2 i \delta^{\dot{\beta}}_{~\dot{\alpha}} \lambda_\alpha \\
+%% second line
+  & D^2 \mathcal{P}_{\alpha\dot{\alpha}} | = 0 ~~~
+  \bar{D}^2 \mathcal{P}_{\alpha\dot{\alpha}} \equiv 0 &
+\end{eqnarray*}
+
+  More properties of 
+$ \mathcal{P}_{\alpha\dot{\alpha}} $:
+\begin{eqnarray*}
+%% first line
+    D_\gamma \bar{D_{\dot{\varepsilon}}} \mathcal{P}_{\alpha\dot{\alpha}} | & = &
+ 2 \epsilon_{\alpha\gamma} \epsilon_{\dot{\varepsilon}\dot{\alpha}} D 
+  + i \slashed{\partial}_{\alpha\dot{\beta}} ( \bar{\slashed{v}}^{\dot{\beta}}_{~\gamma} )
+                \epsilon_{\dot{\varepsilon}\dot{\alpha}} 
+  + i \slashed{\partial}_{\gamma\dot{\alpha}} ( \slashed{v}_{\alpha\dot{\varepsilon}} ) \\
+%% second line
+  && 
+  -~ 2 \slashed{\partial}_{\gamma\dot{{\varepsilon}}}
+          (\slashed{\mathcal{D}}_{\alpha\dot{\alpha}} )
+  - \frac{1}{2} \epsilon_{\dot{\varepsilon}\dot{\alpha}}
+                \left( \sigma^\mu \bar{\sigma}^\nu \right)_{\alpha\gamma}
+                [v_\mu v_\nu] \\
+%% third line
+   D^2 \bar{D}^{\dot{\varepsilon}} \mathcal{P}_{\alpha\dot{\alpha}} | & = &
+   4 \slashed{\partial}_\alpha^{~\dot{\varepsilon}} 
+            ( \bar{\lambda}_{\dot{\alpha}} ) 
+ - 4 \slashed{\partial}_{\alpha\dot{\alpha}} 
+            ( \bar{\lambda}^{\dot{\varepsilon}} ) 
+ - 4 \delta^{\dot{\varepsilon}}_{~\dot{\alpha}}
+            \slashed{\partial}_{\alpha\dot{\beta}}
+            (\bar{\lambda}^{\dot{\beta}} ) 
+ - 4 i \delta^{\dot{\varepsilon}}_{~\dot{\alpha}} 
+            [ \slashed{v}_{\alpha\dot{\beta}} \bar{\lambda}^{\dot{\beta}} ]
+\end{eqnarray*}
+
+%%%
+%%% Now some lower-components of derivatives
+%%%
+  The following relations are useful when deriving components of a particular
+expression:
+\begin{eqnarray*}
+%% first line
+  D_\alpha \bar{D}_{\dot{\alpha}} | = &
+       - \partial_\alpha \bar{\partial}_{\dot{\alpha}} 
+       - i \slashed{\partial}_{\alpha{\dot{\alpha}}} 
+  ~~~~~~~
+  \bar{D}_{\dot{\alpha}}D_\alpha | = &
+       - \bar{\partial}_{\dot{\alpha}} \partial_\alpha
+       - i \slashed{\partial}_{\alpha{\dot{\alpha}}} \\
+%% second line
+  D^2 \bar{D}_{\dot{\beta}} | = &
+       - \partial^2 \bar{\partial}_{\dot{\beta}} 
+       - 2 i \partial^\alpha \slashed{\partial}_{\alpha\dot{\beta}}
+  ~~~
+  D^\alpha \bar{D}^2 | =  &
+       \partial^\alpha \bar{\partial}^2  
+       - 2 i \overline{\partial_{\dot{\beta}}
+                       \slashed{\partial}^{\dot{\beta}\alpha}} \\
+%% third line
+  & D^2 \bar{D}^2 | =
+          \partial^2 \bar{\partial}^2  
+    + 4 i \partial \slashed{\partial} \bar{\partial} 
+    + 4 \Box &
+\end{eqnarray*}
+\end{document}

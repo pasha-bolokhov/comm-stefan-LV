@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[english]{babel}
+\usepackage{latexsym}
+
+\newcommand{\slashed}[1]{\hbox{{$#1$}\llap{$/$}}}
+
+\begin{document}
+%%
+%% gauge Kahler term
+\begin{eqnarray}
+\label{dim5_component}
+	\mathcal{L}_{\mathrm{LV}}^{\mathrm{gauge(K)}} & = & 
+	2\, \overline{\lambda\,\slashed{n}}\, \Box\, 
+	   \lambda 
+	~+~
+	2\, \lambda\, n^\mu \partial_\mu \slashed{\partial}\, 
+	   \overline{\lambda} 
+	~-~ 
+	2\, D\, n_\mu \partial_\nu F^{\mu\nu}
+	~+~ \\
+% second line of this operator
+\nonumber
+	& + &
+	\partial_\lambda F^{\lambda\mu}\, 
+	\widetilde{F}_{\mu\nu} \cdot n^\nu
+\end{eqnarray}
+
+%%
+%% gauge Tensor term
+\begin{eqnarray}
+\nonumber
+\lefteqn{
+	\mathcal{L}_{\mathrm{LV}}^{\mathrm{gauge(T)}}  = 
+	\left\{ T^{\mu\nu\rho} 
+		~+~ 
+	       i\,\frac{1}{2}\,\epsilon^{\nu\rho\sigma\tau}
+	       T^\mu_{\phantom{\mu}\sigma\tau} \right\} \times 
+	}\\
+% second line of this operator
+\nonumber
+	&&
+	\times
+	\Biggl(
+	     2i\, \overline{\lambda}\, \partial_\mu\partial_\nu
+	     \overline{\sigma}_\rho\, \lambda 
+		~+~
+		\partial_\mu D\, \widetilde{F}_{\nu\rho}
+		~-~
+		\frac{1}{2}
+		\left\{
+			F_{\sigma\nu} ~+~ 
+			i \widetilde{F}_{\sigma\nu}
+		\right\}\, 
+		\partial_\mu F_\rho^{\phantom{\rho}\sigma}
+	\Biggr)
+\end{eqnarray}
+
+\end{document}

@@ -1,0 +1,5 @@
+#
+
+latex spur1.tex && dvips -o spur1.ps spur1.dvi && ps2pdf spur1.ps spur1.pdf
+
+

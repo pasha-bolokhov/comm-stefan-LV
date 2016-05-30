@@ -1,0 +1,99 @@
+
+\documentclass[11pt]{article}
+
+\usepackage{verbatim}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{epsfig}
+\usepackage{color}
+\setlength{\oddsidemargin}{0.35in}
+\setlength{\evensidemargin}{0.35in}
+\setlength{\topmargin}{-1cm}
+
+\hoffset-1in
+\voffset+0.1in
+\if@twoside\oddsidemargin25mm
+\evensidemargin25mm\marginparwidth25mm
+\else
+\oddsidemargin25mm\evensidemargin25mm\marginparwidth25mm\fi%
+\textwidth 17cm
+\textheight 45\baselineskip
+
+
+\input{texdefs} 
+
+\begin{document}
+
+
+Let $x^m, y^m$ and $z^m$ be three (independent) vectors in four
+dimensions. The tensor that we are considering, 
+\equ{
+A^{mnp} = \frac 12 \Big( x^m \, y^n - x^n \, y^m \Big) z^p~, 
+\labl{expl}
+}
+has $6 \cdot 4 = 24$ components. But not all of them are relevant when
+contracted with the operator in our theory. This means that we are
+looking for the most general tensor $C^{mnp}$ constructed from
+$A^{Pmnp}$ such that: 
+\equ{
+C^{mnp}\, \ge_{mnpq} = 0~, 
+\qquad 
+C^{mnp}\, \get_{np} = 0~. 
+\labl{cond}
+}
+Since these are two vector equations, $C^{mnp}$ has $24 - 4-4=16$ 
+independent components. 
+
+
+Before constructing this tensor explicitly, we investigate the
+symmetry properties of a tensor 
+\equ{
+B^{mnp} = A^{mnp} + \ge^{mnpq} N_q~,
+}
+with $N_q$ chosen such that the first condition in \eqref{cond} is
+satisfied. Using the explicit form of $A^{mnp}$ in \eqref{expl}, we
+find that $B^{mnp}$ takes the form
+\equ{
+B^{mnp} = \frac 16 \Big[ 
+2 \Big( x^m \, y^n - x^n \, y^m \Big) z^p 
++ \Big( x^m \, y^p - x^p \, y^m \Big) z^n
++ \Big( x^p \, y^n - x^n \, y^p \Big) z^m 
+\Big]~. 
+}
+Clearly, $B^{mnp}$ is not symmetric in the last two indices: 
+$B^{mpn} \neq B^{mnp}\,$. So our assumption that we could obtain the
+irreducible representation by symmetrization was wrong. 
+
+
+To construct the tensor $C^{mnp}$ we proceed as follows. Notice that
+$C^{mnp}$ has $16 =4\cdot 4$ components, therefore one might expect
+one needs two vectors $x^m$ and $y^m$ to parameterize it. Indeed, 
+consider the tensors
+\equ{
+\arry{rcl}{
+C_\pm^{mnp} (x, y) &= & \dsp 
+\frac 12 \Big( x^m \, y^n - x^n \, y^m \Big) x^p 
+\mp  \frac 12 \Big( x^m \, y^n - x^n \, y^m \Big) y^p 
+\\[2ex] & & \dsp 
++ \frac {(x \mp y) \cdot y}6
+\Big( \get^{mp} \, x^n - \get^{np}\, x^m \Big) 
+- \frac {(x \mp y) \cdot x}6 
+\Big( \get^{mp} \, y^n - \get^{np}\, y^m \Big) 
+~. 
+}
+}
+It is not difficult to check that they satisfy both conditions of
+\eqref{cond}. Because under the interchange of $x$ and $y$ we find 
+\equ{
+C_\pm^{mnp}(y,x) = \pm\, C_\pm^{mnp}(x,y)~, 
+} 
+$C_+^{mnp}$ and $C_-^{mnp}$ have $10$ and $6$ components,
+respectively. 
+
+
+
+\end{document} 
+
+
+

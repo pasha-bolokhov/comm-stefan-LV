@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx,epsfig}
+\usepackage[english]{babel}
+\usepackage{latexsym}
+
+\newcommand{\slashed}[1]{\hbox{{$#1$}\llap{$/$}}}
+
+\begin{document}
+
+   The spurious operator 
+$	\int d^4 \theta 
+    D^\alpha \tilde{V} \bar{D}_{\dot{\alpha}} \tilde{V}'
+    \overline{ {\mathcal D}^{\dot{\alpha}} S } e^V
+    {\mathcal D}_\alpha S $ 
+   in components looks as
+\begin{eqnarray*}
+%%
+%% 1st line
+&&
+	\int d^4 \theta 
+    D^\alpha \tilde{V} \bar{D}_{\dot{\alpha}} \tilde{V}'
+    \overline{ {\mathcal D}^{\dot{\alpha}} S } e^V
+    {\mathcal D}_\alpha S = \\
+%%
+%% 2nd line
+&&
+  = 4 \, ( n' {\mathcal D} ) \bar{z} \cdot ( n {\mathcal D} ) z 
+  + i \, 2 \, \bar{\psi} \left \{
+           \bar{\slashed{n}} (n' {\mathcal D}) +
+          \bar{\slashed{n}'} (n {\mathcal D}) 
+                   \right \} \psi + \\
+%%
+%% 3rd line
+&&
+  + i \, \bar{\psi} \left \{
+       n' n \cdot \bar{\slashed{\mathcal D}} 
+    -  n {\mathcal D} \cdot \bar{\slashed{n}'}
+    -  n' {\mathcal D} \cdot \bar{\slashed{n}} 
+    +  i \epsilon^{\mu\nu\rho\lambda} 
+       n'^\mu n^\nu {\mathcal D}^\rho \bar{\sigma}^\lambda
+                 \right \} \psi + \\
+%%
+%% 4th line
+&&
+  + i \, \frac{\sqrt{2}}{2} \, \left \{
+       \bar{z} \lambda \slashed{n}' \bar{\slashed{n}} \psi 
+    -  \overline{ \psi \slashed{n}' } \slashed{n} \bar{\lambda} z
+                 \right \}
+  -  2 \, (n \cdot n') \bar{F} F
+\end{eqnarray*}
+
+\end{document}
